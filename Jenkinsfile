@@ -3,7 +3,7 @@ node() {
         git 'https://github.com/dummyrepos/game-of-life.git'
     }
     stage('build') {
-        sh 'mvn clean package'
+        sh 'mvn package'
     }
     stage('testresults'){
         junit 'gameoflife-web/target/surefire-reports/*.xml'
