@@ -6,9 +6,9 @@ node() {
         sh 'mvn package'
     }
     stage('testresults'){
-        junit 'gameoflife-web/target/surefire-reports/*.xml'
+        junit 'gol/target/surefire-reports/*.xml'
     }
     stage('archiveartifacts') {
-        archiveArtifacts artifacts: 'gameoflife-web/target/*.war', followSymlinks: false
+        archiveArtifacts artifacts: 'gol/target/*.war', followSymlinks: false
     }
 }
