@@ -1,6 +1,6 @@
 node() {
     stage('git') {
-        git 'https://github.com/dummyrepos/game-of-life.git'
+        git 'https://github.com/vsk2408/game-of-life.git'
     }
     stage('build') {
         sh 'mvn package'
