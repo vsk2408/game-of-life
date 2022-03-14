@@ -1,6 +1,6 @@
 Pipeline{
     agent any
-    {
+    
     stage('git') {
         git 'https://github.com/vsk2408/game-of-life.git'
     }
@@ -13,5 +13,5 @@ Pipeline{
     stage('archiveartifacts') {
         archiveArtifacts artifacts: 'gameoflife-web/target/*.war', followSymlinks: false
     }
-    }
+    
 }
