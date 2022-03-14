@@ -1,4 +1,6 @@
-node() {
+Pipeline{
+    agent any
+    {
     stage('git') {
         git 'https://github.com/vsk2408/game-of-life.git'
     }
@@ -10,5 +12,6 @@ node() {
     }
     stage('archiveartifacts') {
         archiveArtifacts artifacts: 'gameoflife-web/target/*.war', followSymlinks: false
+    }
     }
 }
