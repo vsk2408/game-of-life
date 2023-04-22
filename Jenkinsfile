@@ -2,7 +2,7 @@ Pipeline{
     agent any
     
     stage('git') {
-        checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/vsk2408/game-of-life/']])
+        git 'https://github.com/vsk2408/game-of-life.git'
     }
     stage('build') {
         sh 'mvn package'
