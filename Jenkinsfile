@@ -16,8 +16,8 @@ Pipeline{
           sh 'mvn sonar:sonar -Dsonar.login=$SONAR_AUTH_TOKEN -Dsonar.host.url=${SONAR_URL}'
         }
       }
-    }
-    stage('Docker hub'){
-        sh 'docker build -t game-of-life .'
-    }
+   }
+    //stage('Docker hub'){
+      //  sh 'docker build -t game-of-life .'
+    //}
 }
